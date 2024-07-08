@@ -39,7 +39,7 @@ export default async function handler(
       rate: true,
     },
   })
-  
+
   const book = {
     ...bookPrisma,
     avgRating: booksRatings[0]._avg.rate ?? 0,

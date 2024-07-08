@@ -9,7 +9,7 @@ import { SessionProvider } from 'next-auth/react'
 import { DefaultSeo } from 'next-seo'
 import type { AppProps } from 'next/app'
 import { Nunito } from 'next/font/google'
-import { ReactElement, ReactNode } from 'react'  
+import { ReactElement, ReactNode } from 'react'
 
 globalStyles()
 
@@ -24,11 +24,11 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-  export default function App({
-    Component,
-    pageProps: { session, ...pageProps },
-  }: AppPropsWithLayout) {
-    const getLayout = Component.getLayout ?? ((page) => page)
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
     <QueryClientProvider client={queryClient}>
